@@ -12,6 +12,10 @@ mongoose.connect(mongoURI)
 // INITIALIZE APP
 const app = express();
 
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: __dirname });
+})
+
 
 // BODYPARSER
 app.use(bodyParser.json());

@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>SERVER API</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    >
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>SERVER API</h1>
+
+      <p>Description : This is a REST API that can handle CRUD request.</p>
+
+      <table class="table table-striped">
+        <thead>
+          <tr class="row">
+            <th class="col-md-4">HTTP</th>
+            <th class="col-md-4">Route</th>
+            <th class="col-md-4">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- GET ITEMS -->
+          <tr class="row">
+            <td>GET</td>
+            <td>/items</td>
+            <td>Get all items.</td>
+          </tr>
+
+          <!-- POST ITEM -->
+          <tr class="row">
+            <td>POST</td>
+            <td>/items</td>
+            <td>Create an item.</td>
+          </tr>
+
+          <!-- SHOW AN ITEM -->
+          <tr class="row">
+            <td>GET</td>
+            <td>/items/:id</td>
+            <td>Get the item via _id.</td>
+          </tr>
+
+          <!-- UPDATE AN ITEM -->
+          <tr class="row">
+            <td>PATCH</td>
+            <td>/items/:id</td>
+            <td>Update an item.</td>
+          </tr>
+
+          <!-- DELETE AN ITEM -->
+          <tr class="row">
+            <td>DELETE</td>
+            <td>/items/:id</td>
+            <td>Delete an item.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+    </div>
+
+  </body>
+</html>
