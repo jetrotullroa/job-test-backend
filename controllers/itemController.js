@@ -24,7 +24,7 @@ exports.create_an_item = (req, res) => {
 }
 
 exports.show_an_item = (req, res) => {
-  Item.findById(req.params.ItemId, (err, item) => {
+  Item.findOne(req.params.ItemId, (err, item) => {
     if (err) {
       res.send(err)
     } else {
