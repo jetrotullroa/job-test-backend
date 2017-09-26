@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser')
 
 
 // MODELS
@@ -10,6 +11,10 @@ mongoose.connect(mongoURI)
 
 // INITIALIZE APP
 const app = express();
+
+
+// BODYPARSER
+app.use(bodyParser.json());
 
 require('./routes/itemsRoutes')(app)
 
