@@ -3,11 +3,19 @@ const mongoose = require('mongoose'),
 
 // ALL ITEMS
 exports.list_all_items = (req, res) => {
-  Item.find({}, (err, item) => {
+  Item.paginate({}, { limit: 30 }, (err, items) => {
     if (err) {
       res.send(err)
     } else {
-      res.json(item)
+      res.json({
+        items: items.docs,
+        paginationInfo: {
+          totalResult: items.total,
+          resultPerPage: items.limit,
+          currentPage: items.page,
+          pages: items.pages
+        }
+      })
     }
   })
 }

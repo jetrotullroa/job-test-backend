@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+const mongoosePaginate = require('mongoose-paginate');
+
 const ItemSchema = new Schema({
   name: {
     type: String,
@@ -15,5 +17,7 @@ const ItemSchema = new Schema({
     required: "Please provide the brand name."
   }
 })
+
+ItemSchema.plugin(mongoosePaginate)
 
 mongoose.model('items', ItemSchema)
